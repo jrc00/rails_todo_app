@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
   resources :todos
   match 'todos/:id/toggle_completed', to: 'todos#toggle_completed', via: 'get'
   root to: 'static_pages#home'
